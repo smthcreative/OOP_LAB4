@@ -82,8 +82,8 @@ class Elf extends Character{
 class King extends Character{
     public King(){
         Random rand = new Random();
-        int hp = rand.nextInt(5, 16);
-        int power = rand.nextInt(5, 16);
+        int hp = 5 + rand.nextInt(11);
+        int power = 5 + rand.nextInt(11);
         super.setHp(hp);
         super.setPower(power);
     }
@@ -95,8 +95,8 @@ class King extends Character{
 class Knight extends Character{
     public Knight() {
         Random rand = new Random();
-        int hp = rand.nextInt(2, 13);
-        int power = rand.nextInt(5, 13);
+        int hp = 2 + rand.nextInt(11);
+        int power = 5 + rand.nextInt(8);
         super.setHp(hp);
         super.setPower(power);
     }
@@ -125,9 +125,6 @@ class CharacterFactory {
     }
 }
 class GameManager{
-//    CharacterFactory fac = new() CharacterFactory;
-//    Character c1 = fac.createCharacter();
-//    Character c2 = fac.createCharacter();
    void fight(Character c1, Character c2) {
            while (c1.isAlive() && c2.isAlive()){
                System.out.println(c1);
